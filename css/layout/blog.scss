@@ -27,6 +27,11 @@
   .post-destaque {
     margin-right: 2em;
   }
+    @media #{$mq-mobile} {
+      .post-destaque{
+        width: auto;
+      } 
+  }
   
   .post-destaque img {
     width: 100%;
@@ -41,6 +46,12 @@
     display: block;
   }
   
+  @media #{$mq-mobile} {
+    .posts-antigos {
+      width: auto;
+    }
+  }
+
   .posts-antigos a:hover {
     text-decoration: underline;
   }

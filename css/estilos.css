@@ -1,5 +1,21 @@
 @charset "UTF-8";
 /**Criar uma variável**/
+.destaque button, .plano button, .contato button {
+  -webkit-box-shadow: 0.2px 6.65px 0.35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.2px 6.65px 0.35px rgba(0, 0, 0, 0.3); }
+
+/*
+@mixin sombra-padrao {
+  --webkit-box-shadow: box-shadow: 0.2px 6.65px 0,35px rgba (0, 0, 0, 0.3);
+  box-shadow: 0.2px 6.65px 0,35px rgba (0, 0, 0, 0.3);
+}
+// Mixin é um trecho de código transformado em variável  **/
+/** Placeholder**/
+.plataformas li, .social li a {
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -366,6 +382,9 @@ body {
   width: 940px;
   margin: 0 auto; }
 
+@media (max-width: 980px) {
+  .container {
+    width: 90%; } }
 .titulo-secao {
   text-decoration: underline;
   font-size: 2em;
@@ -387,26 +406,42 @@ header {
   height: 90px;
   width: 100%;
   position: absolute; }
+  @media (max-width: 980px) {
+    header {
+      height: auto; }
+      header h1 {
+        max-width: 50%;
+        margin: 0 auto; }
+        header h1 img {
+          max-width: 100%;
+          margin: .5em auto;
+          display: block; } }
 
-header .container {
-  position: relative; }
-
-/** Aninhamento no Sass **/
 .menu-principal {
   position: absolute;
   right: 0;
-  top: -.05em;
+  top: .5em;
   font-size: 1.2em;
   font-weight: lighter; }
+  @media (max-width: 980px) {
+    .menu-principal {
+      position: static;
+      display: block;
+      text-align: center;
+      width: auto; } }
   .menu-principal ul {
     padding-left: 0; }
   .menu-principal li {
     display: inline-block;
     width: 5em; }
-  .menu-principal a {
-    color: white;
-    text-decoration: none; }
-    .menu-principal a:hover {
+    @media (max-width: 980px) {
+      .menu-principal li {
+        margin: .4em;
+        width: auto; } }
+    .menu-principal li a {
+      color: white;
+      text-decoration: none; }
+    .menu-principal li a:hover {
       text-decoration: underline; }
 
 /** Destaque **/
@@ -418,6 +453,10 @@ header .container {
   height: 330px;
   padding-top: 10em; }
 
+@media (max-width: 980px) {
+  .destaque {
+    font-size: 14px;
+    height: 250px; } }
 .destaque p {
   width: 30em; }
 
@@ -438,8 +477,6 @@ header .container {
   font-size: 1.2em;
   -webkit-border-radius: 50px;
   border-radius: 50px;
-  --webkit-box-shadow: box-shadow: 0.2px 6.65px 0,35px rgba (0, 0, 0, 0.3);
-  box-shadow: 0.2px 6.65px 0, 35px rgba 0, 0, 0, 0.3;
   font-weight: bold; }
 
 /** Sobre **/
@@ -468,9 +505,6 @@ header .container {
   display: inline-block;
   width: 50px;
   height: 60px;
-  text-indent: -9999px;
-  overflow: hidden;
-  background-repeat: no-repeat;
   background-position: center;
   margin: 1em 1.5em 0 0; }
 
@@ -539,8 +573,6 @@ header .container {
   font-size: 1.2em;
   -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
-  --webkit-box-shadow: box-shadow: 0.2px 6.65px 0,35px rgba (0, 0, 0, 0.3);
-  box-shadow: 0.2px 6.65px 0, 35px rgba 0, 0, 0, 0.3;
   margin-left: 2em; }
 
 .icone-check, .icone-x {
@@ -580,6 +612,9 @@ header .container {
 .post-destaque {
   margin-right: 2em; }
 
+@media (max-width: 980px) {
+  .post-destaque {
+    width: auto; } }
 .post-destaque img {
   width: 100%; }
 
@@ -591,6 +626,9 @@ header .container {
   height: 1.7em;
   display: block; }
 
+@media (max-width: 980px) {
+  .posts-antigos {
+    width: auto; } }
 .posts-antigos a:hover {
   text-decoration: underline; }
 
@@ -603,6 +641,9 @@ form {
   margin: 0 auto;
   width: 50%; }
 
+@media (max-width: 980px) {
+  form {
+    width: auto; } }
 .contato input,
 textarea {
   width: 100%;
@@ -621,9 +662,7 @@ textarea {
   height: 38px;
   font-size: 1.2em;
   -webkit-border-radius: 0.3em;
-  border-radius: 0.3em;
-  --webkit-box-shadow: box-shadow: 0.2px 6.65px 0,35px rgba (0, 0, 0, 0.3);
-  box-shadow: 0.2px 6.65px 0, 35px rgba 0, 0, 0, 0.3; }
+  border-radius: 0.3em; }
 
 /** Footer **/
 footer {
@@ -690,9 +729,6 @@ footer a {
   display: block;
   width: 55px;
   height: 55px;
-  text-indent: -9999px;
-  overflow: hidden;
-  background-repeat: no-repeat;
   margin-left: 1em; }
 
 .social a {
